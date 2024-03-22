@@ -22,14 +22,23 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Home = void 0;
 const react_1 = __importStar(require("react"));
+// import styles from './home.module.css'
+const styled_components_1 = __importDefault(require("styled-components"));
+const Title = styled_components_1.default.h1 `
+  color: green;
+  font-size: 3rem
+`;
 const Home = () => {
     const [counter, setCounter] = (0, react_1.useState)(0);
     return (react_1.default.createElement("div", null,
-        react_1.default.createElement("h1", null, "Home"),
-        react_1.default.createElement("button", { onClick: () => setCounter(pre => pre.counter + 1) },
+        react_1.default.createElement(Title, null, "Home"),
+        react_1.default.createElement("button", { onClick: () => setCounter(preCounter => preCounter + 1) },
             "\u70B9\u51FB ",
             counter)));
 };

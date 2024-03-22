@@ -26,13 +26,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.sheet = void 0;
 const React = __importStar(require("react"));
 const server_1 = __importDefault(require("react-dom/server"));
 const server_2 = require("react-router-dom/server");
+const styled_components_1 = require("styled-components");
 const App_1 = __importDefault(require("./App"));
+exports.sheet = new styled_components_1.ServerStyleSheet();
 function render(url) {
-    return server_1.default.renderToString(React.createElement(React.StrictMode, null,
+    return server_1.default.renderToString(exports.sheet.collectStyles(React.createElement(React.StrictMode, null,
         React.createElement(server_2.StaticRouter, { location: url },
-            React.createElement(App_1.default, null))));
+            React.createElement(App_1.default, null)))));
 }
 exports.default = render;

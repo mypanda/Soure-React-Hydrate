@@ -30,9 +30,6 @@ const React = __importStar(require("react"));
 const react_dom_1 = __importDefault(require("react-dom"));
 const react_router_dom_1 = require("react-router-dom");
 const App_1 = __importDefault(require("./App"));
-function render(url) {
-    return react_dom_1.default.hydrate(React.createElement(React.StrictMode, null,
-        React.createElement(react_router_dom_1.BrowserRouter, null,
-            React.createElement(App_1.default, null))));
-}
-exports.default = render;
+react_dom_1.default.render(React.createElement(React.StrictMode, null,
+    React.createElement(react_router_dom_1.BrowserRouter, null,
+        React.createElement(App_1.default, null))), document.querySelector('#root'));

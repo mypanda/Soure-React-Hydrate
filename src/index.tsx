@@ -4,12 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
 
-export default function render(url: string) {
-  return ReactDOM.hydrate(
-    <React.StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </React.StrictMode>
-  )
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.querySelector('#root'))
