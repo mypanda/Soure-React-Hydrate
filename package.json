@@ -5,7 +5,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.3.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "client:start": "react-scripts start",
@@ -16,15 +16,15 @@
     "server:build": "tsc --project tsconfig.server.json",
     "server:start": "tsc && node server",
     "server:watch": "tsc -w",
-    "s:clean": "rm -rf ./server.js ./src/**/*.js",
-    "clean": "npm run c:clean s:clean"
+    "s:clean": "rm -rf ./server.js ./src/*.js ./src/**/*.js",
+    "clean": "npm run c:clean && npm run s:clean"
   },
   "devDependencies": {
     "express": "^4.17.3",
     "react-scripts": "latest",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3",
-    "typescript-plugin-css-modules": "^5.1.0"
+    "typescript-plugin-css-modules": "^3.4.0"
   },
   "browserslist": {
     "production": [

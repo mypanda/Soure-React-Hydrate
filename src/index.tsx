@@ -4,10 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 
 import App from './App'
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-  document.querySelector('#root'))
+  document.querySelector('#root')
+)
